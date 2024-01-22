@@ -87,3 +87,15 @@
         </div>
     </div>
 @endsection
+
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $("#print").click(function() {
+                document.getElementsByClassName('main-sidebar')[0].style.visibility = 'hidden';
+                document.getElementsByClassName('print')[0].style.visibility = 'hidden';
+                window.print();
+            });
+        });
+    </script>
+@endsection

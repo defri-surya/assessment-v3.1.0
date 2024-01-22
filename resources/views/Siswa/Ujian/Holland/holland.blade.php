@@ -2,6 +2,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('assets') }}/holland/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 @endsection
 
 @section('content')
@@ -1298,6 +1299,5 @@
 @endsection
 
 @section('js')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="{{ asset('assets') }}/holland/script.js"></script>
 @endsection
