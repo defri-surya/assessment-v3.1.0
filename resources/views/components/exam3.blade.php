@@ -38,5 +38,10 @@
                 </td>
             </tr>
         </table>
+        <br>
+        <p>
+            <strong>JIKA ANDA MENGGUNAKAN HANDPHONE, GUNAKAN LAYAR [LANDSCAPE] DENGAN MENGAKTIFKAN ROTASI LAYAR OTOMATIS
+                AGAR MENDAPATKAN TAMPILAN YANG BAIK</strong>. <br>
+        </p>
     </div>
 </div>
