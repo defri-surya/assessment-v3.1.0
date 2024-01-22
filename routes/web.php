@@ -67,6 +67,9 @@ Route::group(['middleware' => ['auth', 'CekRole:gurubk']], function () {
 		Route::resource('hasilsemua', 'hasilController');
 		Route::resource('hasilall', 'hasilhollandController');
 		Route::resource('fees', 'feesController');
+
+		// import google sheet
+		Route::get('refresh', 'siswaController@refresh')->name('refresh');
 	});
 });
 

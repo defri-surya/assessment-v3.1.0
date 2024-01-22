@@ -11,6 +11,8 @@ use App\ShareBK;
 use App\User;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Carbon;
+use SheetDB\SheetDB;
 
 
 class siswaController extends Controller
@@ -31,6 +33,44 @@ class siswaController extends Controller
                 ->orWhere('nisn', 'LIKE', "%" . $request->cari . "%");
         })->paginate(8);
         return view('GuruBK.Siswa.index', compact('data', 'sekolah'));
+    }
+
+    public function refresh()
+    {
+        $sheetdb = new SheetDB('3pu4xosv6ej0e');
+        $dataFromGoogleSheets = $sheetdb->get();
+        // dd($dataFromGoogleSheets);
+
+        foreach ($dataFromGoogleSheets as $row) {
+            // Periksa apakah data sudah ada dalam database berdasarkan NIK
+            $existingData = User::where('nisn', $row->{'Nomor NISN'})->first();
+
+            if (!$existingData) {
+                // Cari ID sekolah berdasarkan nama sekolah
+                $sekolah = Sekolah::where('namasekolah', $row->Sekolah)->first();
+                $sekolahId = $sekolah ? $sekolah->id : null;
+
+                // Cari ID afiliator berdasarkan nama psikolog
+                $afiliator = User::where('nama', $row->Psikolog)->where('role', 'afiliator')->first();
+                $afiliatorId = $afiliator ? $afiliator->id : null;
+
+                // Jika data tidak ada dalam database, simpan data baru
+                User::create([
+                    'nisn' => $row->{'Nomor NISN'},
+                    'nama' => $row->{'Nama Lengkap'},
+                    'jeniskelamin' => $row->{'Jenis Kelamin'},
+                    'tanggallahir' => Carbon::createFromFormat('d/m/Y', $row->{'Tanggal Lahir'})->format('Y-m-d'),
+                    'username' => $row->{'Nomor NISN'},
+                    'password' => bcrypt($row->{'Nomor NISN'}),
+                    'role' => 'siswa',
+                    'status' => 'aktif',
+                    'sekolahid' => $sekolahId,
+                    'afiliatorid' => $afiliatorId,
+                ]);
+            }
+        }
+
+        return redirect()->route('siswa.index');
     }
 
     /**

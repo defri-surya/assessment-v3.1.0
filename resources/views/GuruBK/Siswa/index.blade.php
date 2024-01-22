@@ -10,8 +10,11 @@
                 <div class="col-lg-12 col-md-12 col-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="col-md-8">
+                            <div class="col-md-4">
                                 <a class="btn btn-primary" href="{{ route('siswa.create') }}">Tambah Data</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn btn-primary" href="{{ route('refresh') }}">Refresh</a>
                             </div>
                             <div class="col-md-4">
                                 <form method="GET" action="{{ route('siswa.index') }}">
