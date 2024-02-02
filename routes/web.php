@@ -103,6 +103,10 @@ Route::group(['middleware' => ['auth', 'CekRole:siswa']], function () {
 		Route::get('/exam/holland', 'ujianController@ujianHolland')->name('ujian.holland');
 		Route::post('/exam/store', 'ujianController@storeHolland')->name('holland.store');
 		Route::get('/hasil/holland', 'ujianController@hasilHolland')->name('hasil.holland');
+
+		// Sertifikat
+		Route::get('/sertifikat/disc', 'sertifikatController@indexDISC')->name('sertifikat.disc');
+		Route::get('/sertifikat/holland', 'sertifikatController@indexHOLLAND')->name('sertifikat.holland');
 	});
 });
 

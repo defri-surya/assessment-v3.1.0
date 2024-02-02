@@ -180,6 +180,16 @@
                                 href="{{ route('hasil.holland') }}">HOLLAND</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown {{ Request::is('sertifikat*') ? 'active' : '' }}">
+                    <a href="#" class="nav-link has-dropdown"><i
+                            class="fas fa-flag-checkered"></i><span>Sertifikat</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="{{ Request::is('/sertifikat/disc') ? 'active' : '' }}"><a class="nav-link"
+                                href="{{ route('sertifikat.disc') }}">Sertifikat DISC</a></li>
+                        <li class="{{ Request::is('/sertifikat/holland') ? 'active' : '' }}"><a class="nav-link"
+                                href="{{ route('sertifikat.holland') }}">Sertifikat HOLLAND</a></li>
+                    </ul>
+                </li>
             @endcan
 
         </ul>

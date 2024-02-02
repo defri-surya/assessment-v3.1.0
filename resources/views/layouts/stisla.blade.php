@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>BK &mdash; Tes</title>
+    <title>NUMIND &mdash; Tes</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('bootstrap') }}/style.css">
@@ -44,7 +44,7 @@
                     Copyright &copy; {{ date('Y') }} <div class="bullet"></div> PT KALA CITRA NUSWANTARA
                 </div>
                 <div class="footer-right">
-                    Versi 2.0.0
+                    Versi 3.0.0
                 </div>
             </footer>
         </div>
