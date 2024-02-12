@@ -45,7 +45,7 @@ class ujianController extends Controller
         $now = Carbon\Carbon::now();
         $cek = setsoal::where('sekolahid', auth()->user()->sekolahid)->first();
         if (empty($cek)) {
-            Alert::warning('Belum Waktu Ujian', 'Silahkan Hubungi Guru BK');
+            Alert::warning('Belum Waktu Ujian', 'Ujian akan dilaksanakan pada ' . Carbon\Carbon::parse($cek->tanggalmulai)->translatedFormat('d F Y'));
             return redirect()->route('ujian.index');
         }
         if ($cek->status == 'aktif') {
@@ -54,7 +54,7 @@ class ujianController extends Controller
                     return view('Siswa.Ujian.petunjukdisc');
                 }
             }
-            Alert::warning('Belum Waktu Ujian', 'Silahkan Hubungi Guru BK');
+            Alert::warning('Belum Waktu Ujian', 'Ujian akan dilaksanakan pada ' . Carbon\Carbon::parse($cek->tanggalmulai)->translatedFormat('d F Y'));
             return redirect()->route('ujian.index');
         }
     }
@@ -189,8 +189,8 @@ class ujianController extends Controller
         $now = Carbon\Carbon::now();
         $cek = setsoal::where('sekolahid', auth()->user()->sekolahid)->first();
         if (empty($cek)) {
-            Alert::warning('Belum Waktu Ujian', 'Silahkan Hubungi Guru BK');
-            return redirect()->route('ujian.holland');
+            Alert::warning('Belum Waktu Ujian', 'Ujian akan dilaksanakan pada ' . Carbon\Carbon::parse($cek->tanggalmulai)->translatedFormat('d F Y'));
+            return redirect()->route('ujian.index');
         }
         if ($cek->status == 'aktif') {
             if ($now >= $cek->tanggalmulai && $now <= $cek->tanggalselesai) {
@@ -198,8 +198,8 @@ class ujianController extends Controller
                     return view('Siswa.Ujian.Holland.petunjukholland');
                 }
             }
-            Alert::warning('Belum Waktu Ujian', 'Silahkan Hubungi Guru BK');
-            return redirect()->route('ujian.holland');
+            Alert::warning('Belum Waktu Ujian', 'Ujian akan dilaksanakan pada ' . Carbon\Carbon::parse($cek->tanggalmulai)->translatedFormat('d F Y'));
+            return redirect()->route('ujian.index');
         }
     }
 

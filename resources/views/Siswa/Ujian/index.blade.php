@@ -14,7 +14,7 @@
                     @if ($cekKategoriDISC)
                         <div class="col-md-6 text-center">
                             <img src="{{ asset('assets') }}/disc1.png" width="330" class="img-fluid" alt="">
-                            <div class="row mt-3">
+                            <div class="row mt-3 mb-3">
                                 <div class="col-md-12 text-center">
                                 @empty($cek)
                                     <a href="{{ route('ujian', 'disc') }}" class="btn btn-primary"
@@ -30,7 +30,7 @@
                 @if ($cekKategoriHolland)
                     <div class="col-md-6 text-center">
                         <img src="{{ asset('assets') }}/holland.png" width="330" class="img-fluid" alt="">
-                        <div class="row mt-3">
+                        <div class="row mt-3 mb-3">
                             <div class="col-md-12 text-center">
                             @empty($cek2)
                                 <a href="{{ route('exam', 'holland') }}" class="btn btn-primary"
@@ -46,7 +46,7 @@
             @if ($cekKategoriAll)
                 <div class="col-md-6 text-center">
                     <img src="{{ asset('assets') }}/disc1.png" width="330" class="img-fluid" alt="">
-                    <div class="row mt-3">
+                    <div class="row mt-3 mb-3">
                         <div class="col-md-12 text-center">
                         @empty($cek)
                             <a href="{{ route('ujian', 'disc') }}" class="btn btn-primary"
@@ -60,7 +60,7 @@
             </div>
             <div class="col-md-6 text-center">
                 <img src="{{ asset('assets') }}/holland.png" width="330" class="img-fluid" alt="">
-                <div class="row mt-3">
+                <div class="row mt-3 mb-3">
                     <div class="col-md-12 text-center">
                     @empty($cek2)
                         <a href="{{ route('exam', 'holland') }}" class="btn btn-primary"
@@ -75,7 +75,6 @@
     @endif
 </div>
 </div>
-
 </section>
 </div>
 @endsection
