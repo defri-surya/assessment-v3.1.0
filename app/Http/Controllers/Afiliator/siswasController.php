@@ -22,7 +22,7 @@ class siswasController extends Controller
     {
         $data = User::with('sekolah')->where('role', 'siswa')->where('afiliatorid', auth()->user()->id)->when($request->cari, function ($query) use ($request) {
             return $query->where('nama', 'LIKE', "%" . $request->cari . "%");
-        })->paginate(8);
+        })->paginate(10);
         return view('Afiliator.Siswa.index', compact('data'));
     }
 
@@ -68,12 +68,12 @@ class siswasController extends Controller
         $user->status = 'aktif';
         $user->save();
 
-        $camaba = new Camaba;
-        $camaba->user_id = $user->id;
-        $camaba->gurubk_id = auth()->user()->id;
-        $camaba->afiliator_id = $request->afiliator;
-        $camaba->nama = $user->nama;
-        $camaba->save();
+        // $camaba = new Camaba;
+        // $camaba->user_id = $user->id;
+        // $camaba->gurubk_id = auth()->user()->id;
+        // $camaba->afiliator_id = $request->afiliator;
+        // $camaba->nama = $user->nama;
+        // $camaba->save();
 
         Alert::success('Berhasil', 'Data Berhasil Di Tambahkan');
         return redirect()->route('siswa.index');

@@ -20,7 +20,7 @@ class hasilhollandController extends Controller
         $data = HasilakhirHolland::where('sekolahid', auth()->user()->sekolahid)->when($request->cari, function ($query) use ($request) {
             return $query->where('nama', 'LIKE', "%" . $request->cari . "%")
                 ->orWhere('nisn', 'LIKE', "%" . $request->cari . "%");
-        })->paginate(8);
+        })->paginate(10);
         return view('GuruBK.HasilHolland.index', compact('data'));
     }
 

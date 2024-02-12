@@ -20,7 +20,7 @@ class userController extends Controller
     {
         $data = User::with('sekolah')->where('role', 'siswa')->when($request->cari, function ($query) use ($request) {
             return $query->where('nama', 'LIKE', "%" . $request->cari . "%");
-        })->paginate(8);
+        })->paginate(10);
         return view('Superadmin.User.index', compact('data'));
     }
 

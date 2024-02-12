@@ -20,7 +20,7 @@ class gurubkController extends Controller
     {
         $data = User::with('sekolah')->where('role', 'gurubk')->when($request->cari, function ($query) use ($request) {
             return $query->where('nama', 'LIKE', "%" . $request->cari . "%");
-        })->paginate(8);
+        })->paginate(10);
         return view('Superadmin.GuruBK.index', compact('data'));
     }
 

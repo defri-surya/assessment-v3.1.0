@@ -18,9 +18,9 @@ class sekolahController extends Controller
      */
     public function index(Request $request)
     {
-        $data = sekolah::when($request->cari, function ($query) use ($request){
-            return $query->where('namasekolah', 'LIKE', "%".$request->cari."%");
-        })->paginate(8);
+        $data = sekolah::when($request->cari, function ($query) use ($request) {
+            return $query->where('namasekolah', 'LIKE', "%" . $request->cari . "%");
+        })->paginate(10);
         return view('Superadmin.Sekolah.index', compact('data'));
     }
 
@@ -91,7 +91,7 @@ class sekolahController extends Controller
     public function destroy(sekolah $sekolah)
     {
         $cek = User::where('sekolahid', $sekolah->id)->first();
-        if(isset($cek)){
+        if (isset($cek)) {
             Alert::warning('Data Masih Di Gunakan User');
             return redirect()->back();
         }

@@ -16,12 +16,12 @@ class soalDiscController extends Controller
      */
     public function index(Request $request)
     {
-        $data = soaldisc::when($request->cari, function ($query) use ($request){
-            return $query->where('pilihan_a', 'LIKE', "%".$request->cari."%")
-                         ->orWhere('pilihan_b', 'LIKE', "%".$request->cari."%")
-                         ->orWhere('pilihan_c', 'LIKE', "%".$request->cari."%")
-                         ->orWhere('pilihan_d', 'LIKE', "%".$request->cari."%");
-        })->paginate(8);
+        $data = soaldisc::when($request->cari, function ($query) use ($request) {
+            return $query->where('pilihan_a', 'LIKE', "%" . $request->cari . "%")
+                ->orWhere('pilihan_b', 'LIKE', "%" . $request->cari . "%")
+                ->orWhere('pilihan_c', 'LIKE', "%" . $request->cari . "%")
+                ->orWhere('pilihan_d', 'LIKE', "%" . $request->cari . "%");
+        })->paginate(10);
         return view('Superadmin.SoalDisc.index', compact('data'));
     }
 

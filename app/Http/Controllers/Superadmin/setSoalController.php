@@ -19,9 +19,9 @@ class setSoalController extends Controller
     public function index(Request $request)
     {
         $sekolah = sekolah::get();
-        $data = setsoal::with(['sekolah', 'kategori'])->when($request->sekolahid, function ($query) use ($request){
-            return $query->where('sekolahid', 'LIKE', "%".$request->sekolahid."%");
-        })->paginate(8);
+        $data = setsoal::with(['sekolah', 'kategori'])->when($request->sekolahid, function ($query) use ($request) {
+            return $query->where('sekolahid', 'LIKE', "%" . $request->sekolahid . "%");
+        })->paginate(10);
         // dd($data);
         return view('Superadmin.SetSoal.index', compact('data', 'sekolah'));
     }

@@ -24,7 +24,7 @@ class hasilController extends Controller
         $data = hasilakhir::where('sekolahid', auth()->user()->sekolahid)->when($request->cari, function ($query) use ($request) {
             return $query->where('nama', 'LIKE', "%" . $request->cari . "%")
                 ->orWhere('nisn', 'LIKE', "%" . $request->cari . "%");
-        })->paginate(8);
+        })->paginate(10);
         return view('GuruBK.Hasil.index', compact('data'));
     }
 
