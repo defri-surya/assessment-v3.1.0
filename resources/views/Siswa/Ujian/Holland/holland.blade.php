@@ -30,7 +30,8 @@
                             <form class="multisteps-form__form" action="{{ route('holland.store') }}" method="POST"
                                 onsubmit="return confirm('Anda Yakin ?')">
                                 @csrf
-                                <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active"
+                                <div id="step-1"
+                                    class="multisteps-form__panel shadow p-4 rounded bg-white step js-active"
                                     data-animation="scaleIn">
                                     <div class="multisteps-form__content">
                                         <x-exam1 />
@@ -405,7 +406,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                                <div id="step-2" class="multisteps-form__panel shadow p-4 rounded bg-white step"
+                                    data-animation="scaleIn">
                                     <div class="multisteps-form__content">
                                         <x-exam2 />
                                         @php
@@ -847,7 +849,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                                <div id="step-3" class="multisteps-form__panel shadow p-4 rounded bg-white step"
+                                    data-animation="scaleIn">
                                     <div class="multisteps-form__content">
                                         <x-exam3 />
                                         @php

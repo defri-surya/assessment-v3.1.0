@@ -107,11 +107,196 @@ DOMstrings.stepsBar.addEventListener("click", e => {
   setActivePanel(activeStep);
 });
 
-//PREV/NEXT BTNS CLICK
+function validateStep(step) {
+  if (step === 1) {
+    // Validation logic for Step 1
+    const radioGroupStep1R1 = document.querySelectorAll("[name^='r1_']");
+    const radioGroupStep1I1 = document.querySelectorAll("[name^='i1_']");
+    const radioGroupStep1A1 = document.querySelectorAll("[name^='a1_']");
+    const radioGroupStep1S1 = document.querySelectorAll("[name^='s1_']");
+    const radioGroupStep1E1 = document.querySelectorAll("[name^='e1_']");
+    const radioGroupStep1C1 = document.querySelectorAll("[name^='c1_']");
+
+    // Check if at least one radio button is checked for each question
+    for (const radio of radioGroupStep1R1) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedR1 = document.querySelector(
+        `[name='r1_${questionNumber}']:checked`
+      );
+
+      if (!isAnyCheckedR1) {
+        alert(
+          `Please select an option for Question R1 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1I1) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedI1 = document.querySelector(
+        `[name='i1_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedI1) {
+        alert(
+          `Please select an option for Question I1 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1A1) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedA1 = document.querySelector(
+        `[name='a1_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedA1) {
+        alert(
+          `Please select an option for Question A1 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1S1) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedS1 = document.querySelector(
+        `[name='s1_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedS1) {
+        alert(
+          `Please select an option for Question S1 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1E1) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedE1 = document.querySelector(
+        `[name='e1_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedE1) {
+        alert(
+          `Please select an option for Question E1 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1C1) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedC1 = document.querySelector(
+        `[name='c1_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedC1) {
+        alert(
+          `Please select an option for Question C1 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+  }
+
+  if (step === 2) {
+    // Validation logic for Step 2
+    const radioGroupStep1R2 = document.querySelectorAll("[name^='r2_']");
+    const radioGroupStep1I2 = document.querySelectorAll("[name^='i2_']");
+    const radioGroupStep1A2 = document.querySelectorAll("[name^='a2_']");
+    const radioGroupStep1S2 = document.querySelectorAll("[name^='s2_']");
+    const radioGroupStep1E2 = document.querySelectorAll("[name^='e2_']");
+    const radioGroupStep1C2 = document.querySelectorAll("[name^='c2_']");
+
+    // Check if at least one radio button is checked for each question
+    for (const radio of radioGroupStep1R2) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedR2 = document.querySelector(
+        `[name='r2_${questionNumber}']:checked`
+      );
+
+      if (!isAnyCheckedR2) {
+        alert(
+          `Please select an option for Question R2 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1I2) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedI2 = document.querySelector(
+        `[name='i2_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedI2) {
+        alert(
+          `Please select an option for Question I2 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1A2) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedA2 = document.querySelector(
+        `[name='a2_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedA2) {
+        alert(
+          `Please select an option for Question A2 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1S2) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedS2 = document.querySelector(
+        `[name='s2_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedS2) {
+        alert(
+          `Please select an option for Question S2 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1E2) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedE2 = document.querySelector(
+        `[name='e2_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedE2) {
+        alert(
+          `Please select an option for Question E2 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+
+    for (const radio of radioGroupStep1C2) {
+      const questionNumber = radio.name.split("_")[1];
+      const isAnyCheckedC2 = document.querySelector(
+        `[name='c2_${questionNumber}']:checked`
+      );
+      if (!isAnyCheckedC2) {
+        alert(
+          `Please select an option for Question C2 Number ${questionNumber}.`
+        );
+        return false;
+      }
+    }
+  }
+
+  // Add validation logic for other steps if needed
+
+  return true;
+}
+
+// Function to handle button clicks
 DOMstrings.stepsForm.addEventListener("click", e => {
   const eventTarget = e.target;
 
-  //check if we clicked on `PREV` or NEXT` buttons
   if (
     !(
       eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`) ||
@@ -121,7 +306,6 @@ DOMstrings.stepsForm.addEventListener("click", e => {
     return;
   }
 
-  //find active panel
   const activePanel = findParent(
     eventTarget,
     `${DOMstrings.stepFormPanelClass}`
@@ -131,7 +315,14 @@ DOMstrings.stepsForm.addEventListener("click", e => {
     activePanel
   );
 
-  //set active step and active panel onclick
+  if (eventTarget.classList.contains(`${DOMstrings.stepNextBtnClass}`)) {
+    // If NEXT button is clicked, perform validation for the current step
+    if (!validateStep(activePanelNum + 1)) {
+      return;
+    }
+  }
+
+  // Set active step and active panel onclick
   if (eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)) {
     activePanelNum--;
   } else {
@@ -155,12 +346,3 @@ const setAnimationType = newType => {
     elem.dataset.animation = newType;
   });
 };
-
-//selector onchange - changing animation
-const animationSelect = document.querySelector(".pick-animation__select");
-
-animationSelect.addEventListener("change", () => {
-  const newAnimationType = animationSelect.value;
-
-  setAnimationType(newAnimationType);
-});
