@@ -126,7 +126,7 @@ function validateStep(step) {
 
       if (!isAnyCheckedR1) {
         alert(
-          `Please select an option for Question R1 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan R1 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -139,7 +139,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedI1) {
         alert(
-          `Please select an option for Question I1 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan I1 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -152,7 +152,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedA1) {
         alert(
-          `Please select an option for Question A1 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan A1 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -165,7 +165,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedS1) {
         alert(
-          `Please select an option for Question S1 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan S1 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -178,7 +178,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedE1) {
         alert(
-          `Please select an option for Question E1 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan E1 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -191,7 +191,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedC1) {
         alert(
-          `Please select an option for Question C1 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan C1 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -216,7 +216,7 @@ function validateStep(step) {
 
       if (!isAnyCheckedR2) {
         alert(
-          `Please select an option for Question R2 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan R2 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -229,7 +229,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedI2) {
         alert(
-          `Please select an option for Question I2 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan I2 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -242,7 +242,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedA2) {
         alert(
-          `Please select an option for Question A2 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan A2 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -255,7 +255,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedS2) {
         alert(
-          `Please select an option for Question S2 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan S2 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -268,7 +268,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedE2) {
         alert(
-          `Please select an option for Question E2 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan E2 Nomor ${questionNumber}.`
         );
         return false;
       }
@@ -281,7 +281,7 @@ function validateStep(step) {
       );
       if (!isAnyCheckedC2) {
         alert(
-          `Please select an option for Question C2 Number ${questionNumber}.`
+          `Anda belum memilih jawaban pada pertanyaan C2 Nomor ${questionNumber}.`
         );
         return false;
       }
