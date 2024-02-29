@@ -5,9 +5,15 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Online Digital Assessment with DISC, HOLLAND and PAPI KOSTICK method" />
+    <meta name="keywords" content="Online Digital Assessment with DISC, HOLLAND and PAPI KOSTICK method" />
+    <meta name="author" content="NUMIND" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('bootstrap') }}/style.css">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('front') }}/images/odas_icon.ico">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV7MDSCHCM"></script>
@@ -31,7 +37,7 @@
     <!--My Style-->
     <link rel="stylesheet" href="{{ asset('front') }}/css/style.css" />
 
-    <title>Online Personality Test</title>
+    <title>Online Digital Assessment</title>
 </head>
 
 <body style="background-color: #61c3d0">
@@ -50,9 +56,9 @@
                 </div>
                 <div class="col-sm-12 col-lg-6">
                     <div class="banner-text text-center">
-                        <h1 class="text-white judul-banner">Student Online <br> Assessment Test</h1>
+                        <h1 class="text-white judul-banner">Online Digital<br> Assessment</h1>
                         <p class="sub-judul text-center mt-4">
-                            Online personality test mempermudah <br> dalam mengecek tipe
+                            Online Digital Assessment mempermudah <br> dalam mengecek tipe
                             kepribadian anda, <br> dalam menunjang karir dan pendidikan.
                         </p>
                         <p class="sub-judul"></p>
@@ -65,11 +71,11 @@
                             </a>
                         </div>
                         <div class="row partner justify-content-center">
+                            <div class="col-md-4 col-6 col-lg-4">
+                                <img width="90" src="{{ asset('front') }}/images/odas.png" alt="">
+                            </div>
                             {{-- <div class="col-md-4 col-6 col-lg-4">
-                                <img width="100" src="{{ asset('front') }}/images/indi.png" alt="">
-                            </div> --}}
-                            {{-- <div class="col-md-4 col-6 col-lg-4">
-                                <img width="100" src="{{ asset('front') }}/images/abkin.png" alt="">
+                                <img width="150" src="{{ asset('front') }}/images/Bank-BPD-DIY.png" alt="">
                             </div> --}}
                         </div>
                     </div>

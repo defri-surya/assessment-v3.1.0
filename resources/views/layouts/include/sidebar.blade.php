@@ -1,10 +1,10 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Tes BK</a>
+            <a href="index.html"><img width="100" src="{{ asset('front') }}/images/odas.png" alt=""></a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">BK</a>
+            <a href="index.html"><img width="30" src="{{ asset('front') }}/images/odas_side.png" alt=""></a>
         </div>
 
         <ul class="sidebar-menu">

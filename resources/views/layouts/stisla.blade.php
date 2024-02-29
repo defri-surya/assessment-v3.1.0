@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>NUMIND &mdash; Tes</title>
+    <title>ODAS &mdash; Home</title>
+    <meta name="description" content="Online Digital Assessment with DISC, HOLLAND and PAPI KOSTICK method" />
+    <meta name="keywords" content="Online Digital Assessment with DISC, HOLLAND and PAPI KOSTICK method" />
+    <meta name="author" content="NUMIND" />
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('bootstrap') }}/style.css">
+    <link rel="icon" type="image/x-icon" href="{{ asset('front') }}/images/odas_icon.ico">
     {{-- <link rel="stylesheet" href="{{ asset('bootstrap') }}/fontawsome.css"> --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -41,10 +45,10 @@
 
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; {{ date('Y') }} <div class="bullet"></div> PT KALA CITRA NUSWANTARA
+                    Copyright &copy; {{ date('Y') }} <div class="bullet"></div> NUSWANTARA MIND
                 </div>
                 <div class="footer-right">
-                    Versi 3.0.0
+                    Versi 3.0
                 </div>
             </footer>
         </div>
